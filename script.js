@@ -63,29 +63,31 @@ menuIcon.addEventListener("click", () => {
   logo.classList.toggle("active");
 });
 
-document.getElementById("sendBtn").addEventListener("click", function () {
-  const email = document.getElementById("email");
-  const message = document.getElementById("message");
+//sent message
 
-  if (!email.value || !message.value) {
-    showToast("Please fill out all fields.");
-    return;
+
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("contact-formm");
+  const notification = document.getElementById("notification");
+
+  if (form) {
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      
+      
+      notification.style.display = "block";
+      notification.classList.add("show");
+      notification.classList.remove("hide");
+      
+    
+      setTimeout(() => {
+        notification.style.display = "none";
+        notification.classList.remove("show");
+        notification.classList.add("hide");
+      }, 4000);
+
+     
+      form.reset();
+    });
   }
-
-  showToast("Message sent successfully!");
-
-  email.value = "";
-  message.value = "";
 });
-
-/*toast*/
-
-function showToast(msg) {
-  const toast = document.getElementById("toast");
-  toast.textContent = msg;
-  toast.classList.add("show");
-
-  setTimeout(() => {
-    toast.classList.remove("show");
-  }, 3000);
-}
