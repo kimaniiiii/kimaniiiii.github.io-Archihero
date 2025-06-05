@@ -1,0 +1,1187 @@
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+    max-width: 1500px;
+    margin: auto;
+  }
+  
+  body {
+    font-family: zain;
+    background-color:white;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 90%;
+    margin: 0 auto;
+    font-size: 1.8rem;     
+  }
+  
+ 
+  
+  /* Header */
+  
+  header {
+    display: flex;
+    padding:0;
+    margin: 0 10rem;
+  }
+  
+  .nav-left,
+  .nav-right {
+    flex:1;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    align-items: center;
+    font-family:'zain' ;
+    font-size: 2rem;
+  }
+  
+  a {
+    text-decoration: none; 
+    color: inherit;
+  }
+  a:hover {
+    color: #ffa630;
+    transition: color 0.3s ease;
+
+  }
+  
+  .logo {
+   flex: 1.5;
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'bebas neue';
+  color: black;
+  }
+  .him{ color:#ffa630}
+  
+  .logo.active {
+    justify-content: left;
+  }
+  /*buttons*/
+  .btn {
+    position: relative;
+    font-family: "Quicksand";
+    font-weight: 500;
+    font-size: 1.2rem;
+    letter-spacing: 0.05em;
+    border-radius: 1em 0 0.8em;
+    cursor: pointer;
+    border: none;
+    background: #ffa630;
+    color: ghostwhite;
+    overflow: hidden;
+  }
+  
+  .btn span {
+    position: relative;
+    z-index: 10;
+    transition: color 0.4s;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.8em 1.2em 0.8em 1.05em;
+  }
+  
+  .btn::before,
+  .btn::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+  
+  .btn::before {
+    content: "";
+    background: #000;
+    width: 120%;
+    left: -10%;
+    transform: skew(30deg);
+    transition: transform 0.8s cubic-bezier(0.3, 1, 0.8, 1);
+  }
+  
+  .btn:hover::before {
+    transform: translate3d(100%, 0, 0);
+  }
+  
+  .btn:active {
+    transform: scale(0.95);
+  }
+  /* Menu */
+  
+  .menuIconBox {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    display: none;
+  }
+  
+  .menu.active {
+    display: flex;
+  }
+  
+  .menuIcon {
+    width: 6rem;
+    height: 6rem;
+    cursor: pointer;
+  }
+  
+  .menu {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color:#ffa630;
+    z-index: 3;
+    position: absolute;
+    left: 50%;
+    transform: translate(-20%, 20%);
+    width: 50%;
+    border-radius: 2rem;
+    display: none;
+    height: auto;
+    justify-content: space-between;
+    padding: 4rem;
+    box-sizing: border-box;
+  }
+  
+  .menu li {
+    list-style: none;
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  
+  .menu li:hover {
+    color: white; 
+    transition: color 0.5s ease;
+    padding: 1rem 2rem;
+  }
+  
+  /* Hero */
+  
+  .hero {
+    display: flex;
+    height: 64rem;
+    overflow: hidden;
+    position: relative;
+    border-radius: 5rem;
+  }
+  .hero-img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .hero-left {
+    flex: 2;
+    z-index: 1;
+    position: relative;
+    clip-path: polygon(0% 0%, 40% 0%, 0% 500%, 0% 100%);
+    background-color: #b5b5b5;
+  }
+  
+  .hero-txt {
+    text-align: center;
+    position: absolute;
+    z-index: 2;
+    color: white;
+    width: 100%;
+    top: 20%;
+    font-size: 3.5rem;
+    font-family: 'zain';
+  }
+  .hero-txt h1 {
+    font-size: 5rem;
+    margin: 0;
+    line-height: 1.4;
+    font-family: 'bebas neue';
+  }
+  .headerlogo{
+    color:#ffa630;
+  }
+  
+  
+  
+  /* About */
+  
+  .about {
+    display: flex;
+    height: 80rem;
+  }
+  
+  .about-txt {
+    flex: 1 ;
+    padding: 10rem 2rem;
+    font-family: zain;
+  }  
+  .about-image {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .about-img-container {
+    width: 60rem;
+    height: 60rem;
+    border-radius: 5rem;
+    overflow: hidden;
+  
+  
+  }
+  .about-img-containerimg {
+    width: 100%;
+    height: 100%;
+    border-radius: 5rem;
+  
+  }
+  
+  .about-txt h2 {
+    font-size: 4.4rem;
+    margin:0;
+    font-family: 'bebas neue';
+  }
+  .story{
+    color: #ffa630;
+  }
+  .about-txt p {
+    font-size: 2rem;
+    line-height: 1.5;
+    margin:4rem 10rem 4rem 0rem;
+    color:black;  
+  }
+  
+  .about-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Services*/
+  
+  .architecture {
+    height: 80rem;
+  }
+  
+  .architecture-txt {
+    text-align: center;
+  }
+  
+  
+  .architecture-txt h2 {
+    font-size: 3rem;
+    margin: 0;
+    line-height: 1;
+    font-family: 'bebas neue';
+  }
+  .architecture-txt p {
+    font-size: 2rem;
+    line-height: 1.0;
+    margin-top: 2rem;
+    color:black;
+    font-family: zain;
+  }
+  
+  .architecture-container {
+    display: flex;
+    margin-top: 8rem;
+  }
+  
+  .architecture-interior {
+    flex: 1;
+    border-radius: 5rem;
+    background-image:url('assets/interior_dark.jpeg');
+    background-size: cover;
+    background-position: center;
+    height:40rem;
+    color:white;
+    padding: 5rem ;
+    margin: 1rem 2rem;
+    box-sizing: border-box;
+  }
+  
+  .architecture-interior h2 {
+    font-size: 3.5rem;
+    margin: 0;
+    line-height: 2;
+    font-family: 'bebas neue';
+  }
+  .architecture-landscape {
+    flex: 1;
+    border-radius: 5rem;
+    background-image:url('assets/landnight (2).jpeg'); 
+    background-size: cover;
+    background-position: center;
+    height:40rem;
+    box-sizing: border-box;
+    color:white;
+    padding: 5rem;
+    margin: 1rem 2rem;
+  }
+  
+  .architecture-landscape h2 {
+    font-size: 3.5rem;
+    margin: 0;
+    line-height: 2;
+    font-family: 'bebas neue';
+  }
+  
+  .architecture-container p {
+    margin-right: 1rem;
+  }  
+  
+  
+  .construction-management {
+    margin-top: 6rem; 
+    display: flex;
+    height: 38rem;
+    padding: 2rem;
+    background-image: url('assets/construction mangement (1).jpeg');
+    background-size: cover;
+    border-radius: 5rem;
+  }
+  
+  .construction-management-txt {
+    flex: 1;
+    padding: 2rem;
+    background-color:#dde3e1;
+    opacity: 1;
+    border-radius: 5rem;
+    margin-right: 4rem;
+  }
+  .construction-management-divider {
+    flex: 0;
+  }
+  
+  .construction-management-txt h1 {
+    font-size: 4rem;
+    margin: 0;
+    line-height: 2;
+    font-family: 'bebas neue';
+    color:black;
+  } 
+    .construction-management-txt p {
+        font-size: 1.6rem;
+        line-height: 1.5;
+        margin-top: 2rem;
+        color:black;
+    }
+  
+  /* Reviews */
+  
+  .reviews {
+    display: flex;
+    margin-top: 6rem;
+    height: 50rem;
+    align-items: center;
+  }
+  
+  .reviews-txt {
+    flex: 1;
+    padding: 1rem;
+    
+  }
+  
+  .reviews-txt h2 {
+    font-size: 4.5rem;
+    margin: 0;
+    line-height: 1.5;
+    font-family: 'bebas neue';
+  }
+  
+  .reviews-divider {
+    margin: 4rem 0rem;
+  }
+  
+  .reviews-btn {
+    background-color:#dde3e1;
+    border: none;
+    padding: 1rem 1.4rem;
+    border-radius: 3.2rem;
+    margin: 0.5rem 1rem;
+  }
+  
+  .reviews-container {
+    flex: 1;
+    overflow: hidden;
+    margin-top: 5rem;
+  }
+ 
+  
+  .reviews-view {
+    display: flex;
+    height: 38rem;
+    width: 65rem;
+  }
+  
+  .reviews-client-E {
+    border-radius: 5rem;
+    background-image: url('assets/henny.jpeg');
+    background-size: cover;
+    height: 38rem;
+    width:38rem;
+    margin-left:2rem ;
+    margin-right: 2rem;
+    transition:transform 0.8s cubic-bezier(0.4, 0.0, 0.2, 1); 
+  }
+  
+  
+  .reviews-client-H {
+    border-radius: 5rem;
+    background-image: url('assets/henny.jpeg');
+    background-size: cover;
+    height: 38rem;
+    width:38rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    transition:transform 0.8s cubic-bezier(0.4, 0.0, 0.2, 1);
+  }
+  
+  .reviews-client-container {
+    border-radius: 5rem;
+    height: 38rem;
+    width:38rem;
+  }
+  
+  .reviews-client-txt {
+    padding: 3rem 2rem 2rem 2rem;
+    color: white;
+    line-height: 1.5;
+    text-align: center;
+  }
+  
+  .reviews-client-name {
+    font-size: 2rem;
+    margin-top: 1rem;
+    font-family: 'bebas neue';
+  }
+  .arrow1, .arrow2 {
+    width: 4rem;
+    height: 4rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border-radius: 100%;
+  }
+    .arrow1:hover, .arrow2:hover {
+        transform: scale(1.1);
+        transition: transform 0.5s ease;
+        background-color: #ffa630;
+        color: white;
+        transition: background-color 0.3s ease;
+        box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.1);
+    }
+  
+  /* Partners */
+  
+  .partners {
+    background-color: #dde4e6;
+    border-radius: 5rem;
+    padding: 2rem;
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+    height: 11.5rem;
+    display: flex;
+  }
+  
+  .partners-txt {
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-family: 'bebas neue';
+    flex: 2.5;
+    z-index: 0;
+    padding: 4rem ;
+  }
+  
+  .partners-container {
+    padding: 2rem;
+    overflow: hidden;
+    z-index: 0;
+    flex: 4;
+  
+    
+  }
+  .partners-logos {
+    display: flex;
+    gap: 5rem;
+    align-items: center;
+    padding: 1.5rem;
+    animation: marquee-scroll 15s linear infinite;
+  
+  }
+  
+  .partners-logo {
+    height: 5rem;
+    max-width: 20rem;
+    transition: filter 0.3s ease;
+  }
+  
+  .partners-logo:hover {
+    filter: brightness(0.3);
+    transition: filter 0.3s ease;
+}  
+  
+  
+  
+  @keyframes marquee-scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  /* resources */
+  
+  .resources-acc {
+    height: 80rem;
+  }
+  
+  .resources-acc-txt {
+    text-align: center;
+    padding: 2rem 20rem;
+  }
+  .resources-acc-txt h1 {
+    font-size: 3.5rem;
+    font-family: 'bebas neue';
+    padding: 0;
+    line-height: 1;
+  }
+  .origa ,.sat{
+    color: #ffa630;
+  }
+  .resources-acc-container {
+    display: flex;
+    padding: 2rem 2rem;
+    margin-top: 2rem;
+    gap: 4rem;
+  }
+  
+  .resources {
+    flex: 1;
+    border-radius: 5rem;
+    background-color: #dde3e1;
+    height:38rem;
+    padding: 1rem 2rem;
+    margin: 1rem 2rem;
+    color:black;
+    transition: background-image 1s ease; 
+  }
+  
+  .resources-item h2 {
+    font-size: 2.5rem;
+    margin: 0;
+    line-height: 2;
+    font-family: 'bebas neue';
+  }
+  
+  
+  .resources-item {
+    text-align: center;
+    flex: 1;
+    border-radius: 5rem;
+    background-color: #dde3e1;
+    height:40rem;
+    padding: 5rem 4rem;
+    box-sizing: border-box;
+    box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .resources-item:hover {
+    transform: translateY(-.5rem);
+    transition: transform 0.3s ease;
+  }
+  
+  /* Community */
+  
+  .community {
+    height: 62rem;
+    padding: 5rem 2rem;
+    overflow: hidden;
+  }
+  
+  .community-container {
+    background-image: url("assets/minimalist-architecture-space.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 45rem;
+    border-radius: 5rem;
+    background-size: cover;
+    background-position:left;
+    margin-top: 5rem;
+    box-sizing: border-box;
+    display: flex;
+    overflow: hidden;
+  }
+   
+  .community-txt {
+    flex: 1;
+    font-size: 2.2rem;
+    color:white;
+    transition: color 0.3s ease;
+    line-height: 0.6;
+    padding: 4rem;
+  }
+  
+  .community-txt h2 {
+    font-size: 4rem;
+    margin-top: 3rem;
+    font-family: 'bebas neue';
+    color: white;
+    line-height: 0.7;
+  }
+  
+  
+  .community-divider {
+    margin: 6rem 0;
+  }
+  
+  /* FAQ */
+  
+  .faq {
+    display: flex;
+  }
+  
+  .faq-txt {
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .faq-txt p {
+    line-height: 1;
+    font-size: 2.2rem;
+  }
+  
+  .faq-txt h2 {
+    font-size: rem;
+    margin: 0;
+    line-height: 1;
+    font-family: 'bebas neue';
+  }
+  
+  .faq-divider {
+    margin: 0;
+  }
+  
+  .faq-container {
+    flex: 1;
+    gap: 3rem;
+    display: flex;
+    flex-direction: column;
+    padding-top: 5rem;
+    margin-top: 18rem;
+  }
+  
+  .faq-image-container {
+    border-radius: 5rem;
+    height: 60rem;
+    margin-top: 5rem;
+    width: 52rem;
+  }
+  
+  .faq-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 25% center ;
+    border-radius: 5rem;
+    margin-top: 5rem;
+  }
+  
+  .faq-item {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .faq-quizes {
+    font-family: 'bebas neue';
+    width: 100%;
+    border-radius: 2rem 2rem 2rem 2rem;
+    background-color: #dde3e1;
+    padding: 2rem;
+    border: none;
+    box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.1);
+    font-size: 1.8rem;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    font-weight: 500;
+    transition: translate 0.3s ease;
+    margin: 0;
+  }
+  
+  .faq-quizes:hover:not(.active) {
+    transform: translate(0, -1rem); ;
+    transition: translate 0.3s ease;
+    
+  }
+  
+  .faq-btn {
+    background-color:#c1c5c59a;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 3rem;
+    cursor: pointer;
+    font-size: 3.5rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .faq-btn:hover {
+    transition: background-color 0.3s ease;
+    box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.1);
+  }
+  
+  .faq-answers {
+    font-family: zain;
+    display: none;
+    padding: 2rem;
+    background-color:#dde3e1;
+    border-radius: 2rem;
+    font-size: 1.8rem;
+    line-height: 1.5;
+    border-radius: 0rem 0rem 2rem 2rem;
+  }
+  
+  /* Contact */
+  
+  .contact-txt {
+    text-align: center;
+    padding-top: 10rem;
+  }
+  
+  .contact-txt h2 {
+    font-size: 4rem;
+    margin: 0;
+    font-family: 'bebas neue';
+  }
+  
+  .contact-container {
+    height: 80rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .contact-item {
+    display: flex;
+    height: 57rem;
+    padding:2rem;
+    border-radius: 5rem;
+    background-color: #dde3e1;
+  }
+  
+  .contact-us {
+    flex: 1;
+    padding: 2rem;
+    margin-right: 4rem;
+    line-height: 2.0;
+  }
+  
+  .contact-us h2 {
+    font-size: 3rem;;
+    line-height: 2;
+    font-family: 'bebas neue';
+  }
+  
+  .contact-us-txt {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  .contact-us-icons {
+    font-size: 3rem;
+    display: flex;
+    gap: 2rem;
+    margin-top: 4rem;
+  }
+  
+  .contact-us-icon {
+    width: 4.2rem;
+    transition: transform 0.3s ease;
+    flex: 1;
+  }
+  
+  .contact-us-icon:hover {
+    transform: rotate(360deg);
+  }
+  
+  .contact-form {
+    flex: 1;
+    padding: 2rem;
+    margin-right: 4rem;
+  }
+  
+  .contact-form h2 {
+    font-size: 3rem;
+    line-height: 2;
+    font-family: 'bebas neue';
+    padding: 0rem 3rem;
+  }
+  
+  .contact-form-email {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 3rem;
+    background-color:white;
+    border-radius: 5rem;
+    height: 32rem;
+    box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.1);
+    font-size: 2.2rem;
+  }
+  
+  #email {
+    width: 100%;
+    border: none;
+    border-bottom: #1b1919 solid 0.2rem;
+    font-size: 2rem;
+  }
+  
+  #email:focus {
+    outline: none;
+    transform: scale(1.05);
+  }
+  
+  #message {
+    width: 100%;
+    border: none;
+    border-bottom: #1b1919 solid 0.2rem;
+    font-size: 2rem;
+    resize: none;
+  }
+  
+  #message:focus {
+    outline: none;
+    transform: scale(1.05);
+  }
+  
+  .contact-form-btn {
+    border-radius: 3rem;
+    font-size: 2rem;
+    border: none;
+    padding: 1.5rem ;
+    margin-top: 4rem;
+    background-color:#dde3e1;
+    font-weight: bold;
+  }
+  
+  .contact-form-btn:hover {
+    background-color: #FF6B00;
+    color: white;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Footer */
+  
+  footer {
+    display: flex;
+    padding:5rem 0rem;
+    gap: 4rem;
+  }
+  
+  .footer-txt {
+    flex: 1;
+    padding: 2rem;
+    border-radius: 5rem;
+    background-color:#dde3e1;
+  }
+  
+  .footer-txt h1 {
+    font-size: 4rem;
+    line-height: 2;
+    font-family: 'bebas neue';
+    color: #ffa630;
+    padding-left: 3rem;
+  }
+  
+  .footer-links {
+    display: flex;
+    padding-left: 3rem;
+  }
+  
+  .footer-links li {
+    list-style: none;
+    padding: 1rem 0;
+  }
+  
+  .footer-links a {
+    transition: color 0.3s ease;
+  }
+  .footer-links a:hover {
+    color: #ffa630;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-list{
+    flex: 1;
+    text-align:left;
+  }
+  .footer-txt p {
+    opacity: 0.7;
+    padding-left: 3rem;
+  }
+  
+  .footer-action {
+    flex: 1;
+    padding: 4rem;
+    background-image: url('assets/minimalist-architecture-space.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 5rem;
+  }
+  
+  .footer-action h2 {
+    font-size: 4rem;
+    line-height: 1;
+    font-family: 'bebas neue';
+    color:white;
+  }
+  
+  
+  .footer-action-btn {
+    display: flex;
+    margin-top: 8rem;
+    justify-content: center;
+  }
+
+  
+  /* Toast */
+  
+  .toast {
+    visibility: hidden;
+    min-width: 25rem;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 0.8rem;
+    padding: 1.2rem 2rem;
+    position: fixed;
+    z-index: 999;
+    bottom: 3rem;
+    right: 3rem;
+    font-size: 2rem;
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+  
+  .toast.show {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  
+ /* Responsiveness */
+  
+ @media (max-width:1500px) {
+    html {
+      font-size: 62.5%;
+    }
+  }
+  
+  @media (max-width:1250px) {
+    html {
+      font-size: 50%;
+    }
+  }
+  
+  @media (max-width:1050px) {
+    html {
+      font-size: 43%;
+    }
+  }
+  
+  @media (max-width:920px) {
+    html {
+      font-size: 35%;
+    }
+  }
+      
+  
+  @media (max-width:720px) {
+    html {
+      font-size: 35%;
+    }
+
+    .nav-left, .nav-right {
+      display: none !important;
+      flex: 0 !important;
+    }
+    .menuIconBox {
+      display: flex !important;
+      margin-right:5rem ;
+    }
+    .hero{
+      height: 85rem !important;
+  
+    }
+    .hero-txt {
+      font-size: 2.5rem !important;
+      top: 10% !important;
+    }
+    .about {
+      flex-direction: column;
+      height: 128rem !important;
+    }
+    .about-txt {
+      text-align: center;
+      flex: 1 !important;
+    }
+    .about-txt p {
+      margin: 4rem 0 !important;
+    }
+    .about-image {
+      flex: 2.5 !important;
+      
+    }
+    .about-img-container {
+      width: 65rem !important;
+      height: 50rem !important;
+    }
+    .architecture {
+      height: 110rem !important;
+    }
+    .architecture-container {
+      flex-direction: column !important;
+      align-items: center !important;
+    }
+    .architecture-interior, .architecture-landscape {
+      height: 40rem !important;
+      width: 60rem !important;
+      margin: 1rem 0rem !important;
+      flex: none !important;
+    }
+    .construction-management-txt {
+      margin-right: 0rem !important;
+    }
+    .construction-management-divider {
+      display: none !important;
+    }
+    .construction-btns {
+      display: flex;
+      justify-content: center;
+    }
+    .reviews {
+      height: 100rem !important;
+      flex-direction: column !important;
+    }
+    .reviews-txt {
+      padding: 2rem 8rem !important;
+      text-align: center !important;
+      flex: 0.7 !important;
+    }
+     .partners {
+      margin: 2rem 0 !important;
+      height: 6rem !important;
+      padding: 0.5 !important;
+    }
+    .partners-txt {
+      font-size: 1.8rem !important;
+      padding: 1.5rem 0 !important;
+      flex:1 !important;
+    }
+    .partners-container {
+      padding: 0 !important;
+      flex: 2!important;
+    }
+    .partners-logos {
+      padding: 1 !important;
+      gap: 1rem !important;
+    }
+    .partners-logo {
+      height: 3rem !important;
+      max-width: 10rem !important;
+    }
+    .resources-acc {
+      height: 160rem !important;
+    }
+    .resources-acc-txt {
+    
+      padding: 2rem 5rem !important;
+    }
+    .resources-acc-container {
+      flex-direction: column !important;
+      align-items: center !important;
+    }
+    .resources-item {
+      height: 35rem !important;
+      width: 50rem !important;
+      margin: 1rem 0rem !important;
+      flex: none !important;
+    }
+    .community {
+      height: 100rem !important;
+    }
+    .community-container {
+      flex-direction: column !important;
+      height: 90rem !important;
+    }
+    .community-txt {
+      text-align: center !important;
+      flex: 0 !important;
+      padding: 0 !important;
+    }
+    .community-image{
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+    }
+    .community-img {
+      width: 50rem !important;
+    }
+    .faq {
+      flex-direction: column !important;
+    }
+    .faq-txt {
+      padding: 2rem 3rem !important;
+      text-align: center !important;
+      justify-content: center !important;
+      align-items: center !important;
+      flex: 0 !important;
+      height: 80rem !important;
+  
+    }
+    .faq-image-container {
+      height: 40rem !important;
+      width: 50rem !important;
+      margin-top: 5rem !important;
+    }
+    .faq-container {
+      height: 80rem !important;
+      width: 60rem !important;
+      margin: 0 auto !important;
+    }
+    .contact-txt {
+      padding-top: 3rem !important;
+    }
+    .contact-container {
+      height:110rem !important;
+      width: 100% !important;
+      margin: 0 auto !important;
+    }
+    .contact-item {
+      height: 100rem !important;
+      flex-direction: column !important;
+    }
+    .contact-form-email {
+      max-width: 60rem !important;
+    }
+   
+    footer {
+      flex-direction: column !important;
+      padding: 2rem 0 !important;
+    }
+  }  
+  
